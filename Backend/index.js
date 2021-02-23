@@ -7,10 +7,9 @@ import tablesRoutes from "./routes/tables.js";
 
 const app = express();
 
-app.use("/tables", tablesRoutes);
-
 app.use(bodyParser.json());
 app.use(cors());
+app.use("/tables", tablesRoutes);
 
 const CONNECTION_URL = `mongodb+srv://jodiCroft:tablePlannerApp638@cluster0.k18bg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const PORT = process.env.PORT || 5000;
